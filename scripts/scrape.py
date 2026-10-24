@@ -40,16 +40,13 @@ def extract_drive_file_id(url: str) -> str | None:
     if not url:
         return None
 
-    # Accepte les domaines classiques et direct CDN de Google Drive
     if "drive.google.com" not in url and "drive.usercontent.google.com" not in url:
         return None
 
-    # Extraction via query paramètre ?id= (cas de drive.usercontent et uc?id=)
     query_id = parse_qs(urlparse(url).query).get("id")
     if query_id and query_id[0]:
         return query_id[0]
 
-    # Extraction via chemin /d/<ID>/ (cas de file/d/...)
     path_match = re.search(r"/d/([a-zA-Z0-9_-]+)", url)
     if path_match:
         return path_match.group(1)
@@ -65,6 +62,7 @@ def parse_app_cards(html: str) -> list[AppCard]:
         open_link = article.select_one("a.app-card-open-link")
         if open_link is None:
             continue
+
         id_match = re.search(r"/app/(app_\d+_\d+)", open_link["href"])
         if id_match is None:
             continue
@@ -91,4 +89,49 @@ def parse_app_cards(html: str) -> list[AppCard]:
 
             cards.append(
                 AppCard(
-                    app_id
+                    app_id=id_match.group(1),
+                    name=article.get("data-name", ""),
+                    data_modified=int(article.get("data-modified", 0)),
+                    icon_url=icon_url,
+                    description=description,
+                    changelog=changelog,
+                    version_text=version_text,
+                    size_text=size_text,
+                    drive_file_id=extract_drive_file_id(download_url) or "",
+                    download_url=download_url,
+                )
+            )
+        except (KeyError, ValueError):
+            continue
+    return cards
+
+
+def fetch_page(session: requests.Session, page: int) -> str:
+    response = session.get(f"{BASE_URL}/", params={"page": page}, timeout=30)
+    response.raise_for_status()
+    return response.text
+
+
+def scrape_tracked_apps(tracked_ids: set[str]) -> dict[str, AppCard]:
+    """Scan grid pages, return the latest card for every tracked app_id found."""
+    session = requests.Session(impersonate="chrome")
+    session.headers["User-Agent"] = USER_AGENT
+
+    found: dict[str, AppCard] = {}
+    for page in range(1, MAX_PAGES + 1):
+        html = fetch_page(session, page)
+        cards = parse_app_cards(html)
+
+        if not cards:
+            break
+
+        for card in cards:
+            if card.app_id in tracked_ids:
+                found[card.app_id] = card
+
+        if tracked_ids.issubset(found.keys()):
+            break
+
+        time.sleep(PAGE_DELAY_SECONDS)
+
+    return found
