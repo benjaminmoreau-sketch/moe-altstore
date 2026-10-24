@@ -61,4 +61,22 @@ def choose_downloader(download_url: str) -> str:
     return "requests"
 
 
-def download_via_g
+def download_via_gdown(file_id: str, dest_path: Path) -> None:
+    import gdown
+
+    output = gdown.download(f"https://drive.google.com/uc?id={file_id}", str(dest_path), quiet=False)
+    if not output or not dest_path.exists() or dest_path.stat().st_size < 1000:
+        raise RuntimeError(f"gdown n'a pas pu télécharger de fichier valide pour l'ID {file_id}")
+
+
+def download_via_requests(url: str, dest_path: Path) -> None:
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
+            "(KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+        )
+    }
+    with requests.get(url, stream=True, timeout=120, headers=headers, allow_redirects=True) as response:
+        response.raise_for_status()
+        with open(dest_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=1024 *
