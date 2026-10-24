@@ -1063,6 +1063,26 @@
       }
     ]
   },
+  "tiktok": {
+    "app_id": "app_1765813755_4971",
+    "bundle_identifier": "com.zhiliaoapp.musically",
+    "data_modified": 1792622924,
+    "description": "Do not sign with ESign. Hold the Profile button or use a three-finger gesture to open Moe Multi. For login help, see the...",
+    "icon_url": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/tiktok.png",
+    "versions": [
+      {
+        "data_modified": 1792622924,
+        "date": "2026-10-21",
+        "description": "- RXTikTok\n- EOS\n- TikTokSy\n- DLTikTok\n- TikTokLRD\n- EOS Cracked\n- BHTikTok++\n- infinitok\n- BHTikTokPlus\n- ACTikTok\n- VibeTok\n- DarkTik\n- TTK Plus",
+        "display_name": "Tiktok 47.4.0 MoeMulti 10.3",
+        "download_url": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/tiktok-47.4.0/tiktok.ipa",
+        "min_os_version": "15.0",
+        "sha256": "541173f5c31522c54f68ffba250e872e95718099a85c6e4b632b7a525272afbf",
+        "size": 518723268,
+        "version": "47.4.0"
+      }
+    ]
+  },
   "twitch-adfree": {
     "app_id": "app_1768431327_4203",
     "bundle_identifier": "tv.twitch",
@@ -1248,6 +1268,26 @@
         "sha256": "395587c70993b1d251439c0ff9744870a73f1e21b54dced88bd91623fc5ea7bc",
         "size": 204246616,
         "version": "31.7"
+      }
+    ]
+  },
+  "twitter": {
+    "app_id": "app_1778043855_2372",
+    "bundle_identifier": "com.atebits.Tweetie2",
+    "data_modified": 1792704908,
+    "description": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a...",
+    "icon_url": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/twitter.png",
+    "versions": [
+      {
+        "data_modified": 1792704908,
+        "date": "2026-10-22",
+        "description": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a download manager and so much more. Read Blog for changelog. Working native reply and native posting!",
+        "display_name": "12.36 NeoFreeBird Revived 6.4 Best Mod! working login and native post and native reply! New Moe and andrew Version With Liquid Glass Toggle in tweaks Settings",
+        "download_url": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/twitter-12.36/twitter.ipa",
+        "min_os_version": "15.0",
+        "sha256": "0ac2745084437cfcc423b894482d84daf6e14ff22eb64204d2de3d51512fcbb9",
+        "size": 288575884,
+        "version": "12.36"
       }
     ]
   },

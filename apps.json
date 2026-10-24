@@ -23,6 +23,52 @@
           "version": "6.5"
         }
       ]
+    },
+    {
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "developerName": "Moe Apps",
+      "iconURL": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/twitter.png",
+      "localizedDescription": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a...",
+      "name": "Twitter",
+      "screenshots": [],
+      "subtitle": "Twitter",
+      "versions": [
+        {
+          "date": "2026-10-22",
+          "downloadURL": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/twitter-12.36/twitter.ipa",
+          "localizedDescription": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a download manager and so much more. Read Blog for changelog. Working native reply and native posting!",
+          "minOSVersion": "15.0",
+          "size": 288575884,
+          "version": "12.36 (6.4)"
+        }
+      ]
+    },
+    {
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "bundleIdentifier": "com.zhiliaoapp.musically",
+      "developerName": "Moe Apps",
+      "iconURL": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/tiktok.png",
+      "localizedDescription": "Do not sign with ESign. Hold the Profile button or use a three-finger gesture to open Moe Multi. For login help, see the...",
+      "name": "TikTok",
+      "screenshots": [],
+      "subtitle": "TikTok",
+      "versions": [
+        {
+          "date": "2026-10-21",
+          "downloadURL": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/tiktok-47.4.0/tiktok.ipa",
+          "localizedDescription": "- RXTikTok\n- EOS\n- TikTokSy\n- DLTikTok\n- TikTokLRD\n- EOS Cracked\n- BHTikTok++\n- infinitok\n- BHTikTokPlus\n- ACTikTok\n- VibeTok\n- DarkTik\n- TTK Plus",
+          "minOSVersion": "15.0",
+          "size": 518723268,
+          "version": "47.4.0 (10.3)"
+        }
+      ]
     }
   ],
   "description": "Scraped and re-hosted daily \u2014 apps are re-downloaded and republished whenever a new version appears on the source site.",
