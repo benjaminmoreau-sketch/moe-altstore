@@ -17,7 +17,7 @@ def sha256_and_size(file_path: Path) -> tuple[str, int]:
     hasher = hashlib.sha256()
     size = 0
     with open(file_path, "rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+        for chunk in iter(lambda: f.read(1048576), b""):
             hasher.update(chunk)
             size += len(chunk)
     return hasher.hexdigest(), size
@@ -79,4 +79,50 @@ def download_via_requests(url: str, dest_path: Path) -> None:
     with requests.get(url, stream=True, timeout=120, headers=headers, allow_redirects=True) as response:
         response.raise_for_status()
         with open(dest_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=1024 *
+            for chunk in response.iter_content(chunk_size=1048576):
+                f.write(chunk)
+
+
+def download_ipa(card, dest_path: Path) -> None:
+    """Download an app's IPA, routing to the right downloader for its host."""
+    download_url = getattr(card, "download_url", "")
+    drive_file_id = getattr(card, "drive_file_id", None)
+
+    if choose_downloader(download_url) == "gdown" and drive_file_id:
+        try:
+            download_via_gdown(drive_file_id, dest_path)
+            return
+        except Exception as exc:
+            print(f"Échec de gdown ({exc}), bascule sur le lien direct via requests...")
+            fallback_url = f"https://drive.usercontent.google.com/download?id={drive_file_id}&export=download"
+            download_via_requests(fallback_url, dest_path)
+    else:
+        download_via_requests(download_url, dest_path)
+
+
+def upload_release_asset(repo: str, tag: str, asset_path: Path, title: str) -> str:
+    """Create (if needed) a GitHub release and upload the IPA as its asset."""
+    view = subprocess.run(
+        ["gh", "release", "view", tag, "--repo", repo],
+        capture_output=True,
+        text=True,
+    )
+    if view.returncode != 0:
+        subprocess.run(
+            [
+                "gh", "release", "create", tag,
+                "--repo", repo,
+                "--title", title,
+                "--notes", f"Automated build for {title}",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    subprocess.run(
+        ["gh", "release", "upload", tag, str(asset_path), "--repo", repo, "--clobber"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return f"https://github.com/{repo}/releases/download/{tag}/{asset_path.name}"
