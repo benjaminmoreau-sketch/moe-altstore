@@ -1066,7 +1066,7 @@
   "tiktok": {
     "app_id": "app_1765813755_4971",
     "bundle_identifier": "com.zhiliaoapp.musically",
-    "data_modified": 1792622924,
+    "data_modified": 1793127725,
     "description": "Do not sign with ESign. Hold the Profile button or use a three-finger gesture to open Moe Multi. For login help, see the...",
     "icon_url": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/tiktok.png",
     "versions": [
@@ -1080,6 +1080,17 @@
         "sha256": "541173f5c31522c54f68ffba250e872e95718099a85c6e4b632b7a525272afbf",
         "size": 518723268,
         "version": "47.4.0"
+      },
+      {
+        "data_modified": 1793127725,
+        "date": "2026-10-27",
+        "description": "- RXTikTok\n- EOS\n- TikTokSy\n- DLTikTok\n- TikTokLRD\n- EOS Cracked\n- BHTikTok++\n- infinitok\n- BHTikTokPlus\n- ACTikTok\n- VibeTok\n- DarkTik\n- TTK Plus",
+        "display_name": "Tiktok 47.5.0 MoeMulti 10.4",
+        "download_url": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/tiktok-47.5.0/tiktok.ipa",
+        "min_os_version": "15.0",
+        "sha256": "f2fe3a21b91f5170bf18859295f6b3509610e21ef058beca0197a63c1f11c8e9",
+        "size": 551586789,
+        "version": "47.5.0"
       }
     ]
   },
