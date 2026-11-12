@@ -38,6 +38,14 @@
       "subtitle": "Twitter",
       "versions": [
         {
+          "date": "2026-11-12",
+          "downloadURL": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/twitter-12.43/twitter.ipa",
+          "localizedDescription": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a...",
+          "minOSVersion": "15.0",
+          "size": 311109063,
+          "version": "12.43 (6.5)"
+        },
+        {
           "date": "2026-10-22",
           "downloadURL": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/twitter-12.36/twitter.ipa",
           "localizedDescription": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a download manager and so much more. Read Blog for changelog. Working native reply and native posting!",
@@ -60,6 +68,14 @@
       "screenshots": [],
       "subtitle": "TikTok",
       "versions": [
+        {
+          "date": "2026-11-11",
+          "downloadURL": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/tiktok-47.7.0/tiktok.ipa",
+          "localizedDescription": "- RXTikTok\n- EOS\n- TikTokSy\n- DLTikTok\n- TikTokLRD\n- EOS Cracked\n- BHTikTok++\n- infinitok\n- BHTikTokPlus\n- ACTikTok\n- VibeTok\n- DarkTik\n- TTK Plus",
+          "minOSVersion": "15.0",
+          "size": 561998928,
+          "version": "47.7.0 (10.4)"
+        },
         {
           "date": "2026-11-03",
           "downloadURL": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/tiktok-47.6.0/tiktok.ipa",

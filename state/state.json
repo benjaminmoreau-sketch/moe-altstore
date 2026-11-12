@@ -1066,7 +1066,7 @@
   "tiktok": {
     "app_id": "app_1765813755_4971",
     "bundle_identifier": "com.zhiliaoapp.musically",
-    "data_modified": 1793746322,
+    "data_modified": 1794433252,
     "description": "Do not sign with ESign. Hold the Profile button or use a three-finger gesture to open Moe Multi. For login help, see the...",
     "icon_url": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/tiktok.png",
     "versions": [
@@ -1102,6 +1102,17 @@
         "sha256": "686da931b0db6318d22fc1c33ccc8ce6fad0ad99b3daf4c539562340d3198559",
         "size": 555004784,
         "version": "47.6.0"
+      },
+      {
+        "data_modified": 1794433252,
+        "date": "2026-11-11",
+        "description": "- RXTikTok\n- EOS\n- TikTokSy\n- DLTikTok\n- TikTokLRD\n- EOS Cracked\n- BHTikTok++\n- infinitok\n- BHTikTokPlus\n- ACTikTok\n- VibeTok\n- DarkTik\n- TTK Plus",
+        "display_name": "Tiktok 47.7.0 MoeMulti 10.4",
+        "download_url": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/tiktok-47.7.0/tiktok.ipa",
+        "min_os_version": "15.0",
+        "sha256": "17b7e024e15cc09f8ec350af0bbf4f2a948dc2011999240f128abc35cf938ec8",
+        "size": 561998928,
+        "version": "47.7.0"
       }
     ]
   },
@@ -1296,7 +1307,7 @@
   "twitter": {
     "app_id": "app_1778043855_2372",
     "bundle_identifier": "com.atebits.Tweetie2",
-    "data_modified": 1792704908,
+    "data_modified": 1794443949,
     "description": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a...",
     "icon_url": "https://raw.githubusercontent.com/benjaminmoreau-sketch/moe-altstore/main/icons/twitter.png",
     "versions": [
@@ -1310,6 +1321,17 @@
         "sha256": "0ac2745084437cfcc423b894482d84daf6e14ff22eb64204d2de3d51512fcbb9",
         "size": 288575884,
         "version": "12.36"
+      },
+      {
+        "data_modified": 1794443949,
+        "date": "2026-11-12",
+        "description": "Liquid glass toggle is now built into the tweaks settings! Tweak by my friend Andrew and Me, a remade Neofreebird with a...",
+        "display_name": "12.43 NeoFreeBird Revived 6.5 Best Mod working login and native post and native reply New Moe and andrew Version With Liquid Glass Toggle in tweaks Settings",
+        "download_url": "https://github.com/benjaminmoreau-sketch/moe-altstore/releases/download/twitter-12.43/twitter.ipa",
+        "min_os_version": "15.0",
+        "sha256": "0fa3e1c55231030d98c958b4550acb8c5da11005744f63a76f96f328e0c25315",
+        "size": 311109063,
+        "version": "12.43"
       }
     ]
   },
